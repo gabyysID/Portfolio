@@ -12,6 +12,6 @@
 
 ###
 
-<p align="left">Criado para fins educativos<br><br>-🔭 Utilizando conceitos do javascript, o game de asteroids é uma releitura que lembra firmemente a versão da qual foi inspirada,<br>- O game, tem uma página login que puxa um nome de usuario para aparecer em todo momento na tela de jogatina.<br>-🪐O repositorio contém os arquivos de áudio e podem ser usados da maneira que deseja.<br>-🌑A criação do projeto foi baseado em cima de diversos videos no youtube e arquivos soltos em githubs tanto de estrangeiros quanto brasileiros. A junção deles, nos resultou neste projeto satisfatorio</p>
+<p align="left">Criado para fins educativos<br><br>-🔭 Utilizando conceitos do javascript, o game de asteroids é uma releitura que lembra firmemente a versão da qual foi inspirada,<br>-👩‍🚀 O game, tem uma página login que puxa um nome de usuario para aparecer em todo momento na tela de jogatina.<br>-🪐O repositorio contém os arquivos de áudio e podem ser usados da maneira que deseja.<br>-🌑A criação do projeto foi baseado em cima de diversos videos no youtube e arquivos soltos em githubs tanto de estrangeiros quanto brasileiros. A junção deles, nos resultou neste projeto satisfatorio</p>
 
 ###
