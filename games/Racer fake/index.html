@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <title>Corrida | Game </title>
+    <link rel="icon" href="1icon.png">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Press+Start+2P" />
+    <link rel="stylesheet" href="style.css">
+    <script>
+        window.console = window.console || function (t) { };
+    </script>
+    <script>
+        if (document.location.search.match(/type=embed/gi)) {
+            window.parent.postMessage("resize", "*");
+        }
+    </script>
+</head>
+<body translate="no">
+    <div id="game">
+        <div id="road">
+            <div id="cloud"></div>
+            <div id="hero"></div>
+        </div>
+        <div id="hud">
+            <span id="time" class="topUI">0</span>
+            <span id="score" class="topUI">0</span>
+            <span id="lap" class="topUI">0'00"000</span>
+            <span id="tacho">0</span>
+        </div>
+        <div id="home">
+            <h1>Corrida</h1>
+            <p id="text"></p>
+
+            <div id="highscore"></div>
+        </div>
+    </div>
+    <div id="controls">
+        <span><span>C</span>insira a moeda</span>
+        <span><span>M</span>mute</span>
+        <span><span>&lt;</span><span>&gt;</span>mova</span>
+        <span><span>&lt;</span><span>&gt;</span>acelere</span>
+    </div>
+    <script src="js/1.js"></script>
+    <script id="rendered-js" src="script.js"></script>
+    <script src="js/null.js"></script>
+</body>
+</html>
