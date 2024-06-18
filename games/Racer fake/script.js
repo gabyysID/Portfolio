@@ -1,7 +1,3 @@
-// ------------------------------------------------------------
-// assets
-// ------------------------------------------------------------
-
 const ASSETS = {
     COLOR: {
         TAR: ["#959298", "#9c9a9d"],
@@ -50,9 +46,7 @@ const ASSETS = {
     },
 };
 
-// ------------------------------------------------------------
-// helper functions
-// ------------------------------------------------------------
+// -----------------------------------------------
 
 Number.prototype.pad = function (numZeros, char = 0) {
     let n = Math.abs(this);
@@ -108,9 +102,8 @@ function sleep(ms) {
     });
 }
 
-// ------------------------------------------------------------
-// objects
-// ------------------------------------------------------------
+// -----------------------------------------------
+// obj
 
 class Line {
     constructor() {
@@ -235,9 +228,8 @@ class Audio {
     }
 }
 
-// ------------------------------------------------------------
-// global varriables
-// ------------------------------------------------------------
+// -----------------------------------------------
+// variaveis globais
 
 const highscores = [];
 
@@ -287,9 +279,9 @@ let inGame,
 let lines = [];
 let cars = [];
 
-// ------------------------------------------------------------
-// map
-// ------------------------------------------------------------
+// ----------------------------------------------
+// mapa
+
 
 function getFun(val) {
     return (i) => val;
@@ -345,9 +337,8 @@ function genMap() {
 
 let map = genMap();
 
-// ------------------------------------------------------------
-// additional controls
-// ------------------------------------------------------------
+// ---------------------------------
+// controles adicionais
 
 addEventListener(`keyup`, function (e) {
     if (e.code === "KeyM") {
@@ -398,12 +389,10 @@ addEventListener(`keyup`, function (e) {
     }
 });
 
-// ------------------------------------------------------------
+// ------------------------------------------------------
 // game loop
-// ------------------------------------------------------------
 
 function update(step) {
-    // prepare this iteration
     pos += speed;
     while (pos >= N * segL) pos -= N * segL;
     while (pos < 0) pos += N * segL;
@@ -414,7 +403,7 @@ function update(step) {
     scoreVal += speed * step;
     countDown -= step;
 
-    // left / right position
+
     playerX -= (lines[startPos].curve / 5000) * step * speed;
 
     if (KEYS.ArrowRight)
@@ -427,7 +416,7 @@ function update(step) {
 
     playerX = playerX.clamp(-3, 3);
 
-    // speed
+    // velocidade
 
     if (inGame && KEYS.ArrowUp) speed = accelerate(speed, accel, step);
     else if (KEYS.ArrowDown) speed = accelerate(speed, breaking, step);
@@ -439,7 +428,7 @@ function update(step) {
 
     speed = speed.clamp(0, maxSpeed);
 
-    // update map
+    // update mapa
     let current = map[mapIndex];
     let use = current.from < scoreVal && current.to > scoreVal;
     if (use) sectionProg += speed * step;
@@ -453,8 +442,6 @@ function update(step) {
 
         lines[endPos].special = map[mapIndex].special;
     }
-
-    // win / lose + UI
 
     if (!inGame) {
         speed = accelerate(speed, breaking, step);
@@ -482,14 +469,14 @@ function update(step) {
             .pad(3)}`;
     }
 
-    // sound
+    // som
     if (speed > 0) audio.play("engine", speed * 4);
 
-    // draw cloud
+    // desenhando nuvem
     cloud.style.backgroundPosition = `${(cloudOffset -= lines[startPos].curve * step * speed * 0.13) | 0
         }px 0`;
 
-    // other cars
+    // outros carros
     for (let car of cars) {
         car.pos = (car.pos + enemy_speed * step) % N;
 
@@ -500,7 +487,7 @@ function update(step) {
             car.lane = randomProperty(LANE);
         }
 
-        // collision
+        // colisao
         const offsetRatio = 5;
         if (
             (car.pos | 0) === startPos &&
@@ -511,7 +498,7 @@ function update(step) {
         }
     }
 
-    // draw road
+    // desenhando estrada
     let maxy = height;
     let camH = H + lines[startPos].y;
     let x = 0;
@@ -521,7 +508,7 @@ function update(step) {
         let l = lines[n % N];
         let level = N * 2 - n;
 
-        // update view
+        // update tela
         l.project(
             playerX * roadW - x,
             camH,
@@ -530,10 +517,9 @@ function update(step) {
         x += dx;
         dx += l.curve;
 
-        // clear assets
+        
         l.clearSprites();
 
-        // first draw section assets
         if (n % 10 === 0) l.drawSprite(level, 0, ASSETS.IMAGE.TREE, -2);
         if ((n + 5) % 10 === 0)
             l.drawSprite(level, 0, ASSETS.IMAGE.TREE, 1.3);
@@ -545,7 +531,7 @@ function update(step) {
             if ((car.pos | 0) === n % N)
                 l.drawSprite(level, car.element, car.type, car.lane);
 
-        // update road
+        // update estrada
 
         if (l.Y >= maxy) continue;
         maxy = l.Y;
@@ -620,10 +606,7 @@ function update(step) {
     }
 }
 
-// ------------------------------------------------------------
-// init
-// ------------------------------------------------------------
-
+// --------------------------------------
 function reset() {
     inGame = false;
 
