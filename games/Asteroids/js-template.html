@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>Asteroids | Game</title>
+    <link rel="icon" href="icon.webp">
+    <style>
+        body {
+            background-image: url(fundo.avif);
+            background-size: cover;
+            background-repeat: no-repeat;
+        }
+        canvas {
+            position: absolute;
+            left: 325px;
+            /* posiciona a 90px para a esquerda */
+            top: 20%;
+            /* posiciona a 70px para baixo */
+        }
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        main {
+            display: flex;
+            flex-direction: column;
+            width: 100%;
+            min-height: 10vh;
+            align-items: center;
+            justify-content: center;
+            padding: 20px 20px 50px;
+        }
+        span{
+            text-align: center; 
+        }
+        header {
+            display: flex;
+            align-items: center;
+            background-color: rgb(255, 255, 255, 0.5);
+            font-size: 1.2em;
+            width: 100%;
+            max-width: 800px;
+            padding: 1.5%;
+            border-radius: 8px
+        }
+    </style>
+</head>
+
+<body>
+    <main>
+        <header>
+            <span class="player"></span>
+        </header>
+    </main>
+    <canvas id="gameCanvas" width="700" height="500"></canvas>
+    <script src="js/js-template.js"></script>
+</body>
+
+</html>
