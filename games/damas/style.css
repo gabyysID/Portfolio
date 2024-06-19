@@ -1,0 +1,113 @@
+body{
+    margin:0px;
+    background: #000000;
+    font-family: "Arial"
+}
+header {
+    height:50px;
+    background:#F0F0F0;
+    border:1px solid #CCC;
+    width:960px;
+    margin:0px auto;
+    text-align: center;
+}
+header h1 {
+    margin: 5px;
+}
+header h1 span {
+    color: #1c3d54;
+}
+section {
+    text-align: center;
+    width:960px;
+    background: #F0F0F0;
+    border: 1px solid #CCC;
+    margin: 20px auto;
+}
+main {
+    -webkit-perspective: 300;
+    perspective: 300;
+    width:960px;
+    background: #F0F0F0;
+    border: 1px solid #CCC;
+    height: 550px;
+    margin: 20px auto;
+}
+.board {
+    text-align: center;
+    -ms-transform: rotateX(8deg);
+    -webkit-transform: rotateX(8deg);
+    transform: rotateX(8deg);
+    width:500px;
+    height:456px;
+    border:1px solid black;
+    margin: 20px auto;
+}
+.row {
+    height: 12.5%;
+}
+.cell {
+    width:12.5%;
+    height: 12.5%;
+    float:left;
+    background-color: #fff;
+}
+.cell:hover {
+    background-color: yellow;
+}
+.cell-white {
+    background-color: #fff;
+}
+.cell-black {
+    background-color: #0f0f0f;
+}
+.selected {
+    box-sizing:border-box;
+      -moz-box-sizing:border-box;
+      -webkit-box-sizing:border-box;
+    border: 2px solid red; 
+}
+.highlight {
+    background-color: blue;
+    cursor: pointer;
+}
+.board img {
+    width: 90%;
+    cursor: pointer;
+}
+#white-counter, #black-counter {
+    display: inline;
+    margin-right: 5px
+}
+#white-counter span, #black-counter span{
+    color: #284b62;
+    font-weight: bolder;
+    font-size: 30px;
+}
+.btn {
+    position: relative;
+    vertical-align: top;
+    width: 150px;
+    height: 45px;
+    margin: 10px;
+    padding: 0;
+    font-size: 22px;
+    color: white;
+    text-align: center;
+    text-shadow: 0 1px 2px rgba(0, 0, 0, 0.25);
+    background: #345d77;
+    border: 0;
+    border-bottom: 2px solid #192c39;
+    cursor: pointer;
+    -webkit-box-shadow: inset 0 -2px #133953;
+    box-shadow: inset 0 -2px #12354d;
+}
+.btn:active {
+    top: 1px;
+    outline: none;
+    -webkit-box-shadow: none; /*webkit renderiza eu acho */
+    box-shadow: none;
+}
+.btn:hover {
+    background: #15354b;
+}
