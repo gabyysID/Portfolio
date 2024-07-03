@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quiz | Taylor Swift ou Shakespeare? </title>
+    <link rel="icon" href="/images/images-removebg-preview.png">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"/>
+</head>
+<body>
+    <div class="start_btn"><button>Start Quiz</button></div>
+
+    <div class="info_box">
+        <div class="info-title"><span>Regras do Quiz</span></div>
+        <div class="info-list">
+            <div class="info">1. Você terá apenas <span>15 segundos</span> para responder a questão.</div>
+            <div class="info">2. Uma vez que selecionoou uma alternativa, você não poderá re-selecionar</div>
+            <div class="info">3. Você não poderá selecionar qualquer alternativa após o tempo acabar.</div>
+            <div class="info">4. Você não pode sair do quiz enquanto estiver jogando.</div>
+            <div class="info">5. A cada resposta correta, você ganhará pontos.</div>
+        </div>
+        <div class="buttons">
+            <button class="quit">Sair do Quiz</button>
+            <button class="restart">Continue</button>
+        </div>
+    </div>
+    <div class="quiz_box">
+        <header>
+            <div class="title">Quiz - Taylor Swift ou Shakespeare? </div>
+            <div class="timer">
+                <div class="time_left_txt">Tempo Restante</div>
+                <div class="timer_sec">15</div>
+            </div>
+            <div class="time_line"></div>
+        </header>
+        <section>
+            <div class="que_text">
+            </div>
+            <div class="option_list">
+            </div>
+        </section>
+        <footer>
+            <div class="total_que">
+            </div>
+            <button class="next_btn">Prox. Questão</button>
+        </footer>
+    </div>
+    <div class="result_box">
+        <div class="icon">
+            <img src="images/images-removebg-preview.png" width="30%"/>
+        </div>
+        <div class="complete_text">Você completou o Quiz!</div>
+        <div class="score_text">
+        </div>
+        <div class="buttons">
+            <button class="restart">Re-faça o Quiz</button>
+            <button class="quit">Sair do Quiz</button>
+        </div>
+    </div>
+    <script src="js/questions.js"></script>
+    <script src="js/script.js"></script>
+</body>
+</html>
