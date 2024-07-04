@@ -46,7 +46,7 @@ let questions = [
     ]
 },
     {
-    num: 6,
+    numb: 6,
     question: "Eu serei um sol de verão para sempre para você.",
     answer: "Taylor Swift",
     options: [
@@ -55,7 +55,7 @@ let questions = [
     ]
 },
     {
-    num: 7,
+    numb: 7,
     question: "Esse é o êxtase do amor.",
     answer: "Shakespeare",
     options: [
@@ -64,7 +64,7 @@ let questions = [
     ]
 },
     {
-    num: 8,
+    numb: 8,
     question: "Agora é o inverno de nosso descontentamento.",
     answer: "Shakespeare",
     options: [
@@ -73,7 +73,7 @@ let questions = [
     ]
 },
     {
-    num: 9,
+    numb: 9,
     question: "Minha coroa, minha própria ambição e minha rainha.",
     answer: "Shakespeare",
     options: [
@@ -82,7 +82,7 @@ let questions = [
     ]
 },
     {
-    num: 10,
+    numb: 10,
     question: "Dois finais de fogo para quatro olhos olhos azuis.",
     answer: "Taylor Swift",
     options: [
@@ -91,7 +91,7 @@ let questions = [
     ]
 },
     {
-    num: 11,
+    numb: 11,
     question: "Os Fósforos queimam um após o outro",
     answer: "Taylor Swift",
     options: [
@@ -100,7 +100,7 @@ let questions = [
     ]
 },
     {
-    num: 12,
+    numb: 12,
     question: "Eu não vou ficar aqui, porque os bons nunca esperam.",
     answer: "",
     options: [
