@@ -10,7 +10,7 @@
 
 ###
 
-<p align="left">✨ ---sobre---o---projeto</p>
+<p align="left">✨ ---sobre---o---projeto---</p>
 
 ###
 
